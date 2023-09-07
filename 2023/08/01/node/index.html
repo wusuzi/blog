@@ -1,0 +1,81 @@
+<!DOCTYPE html><html lang="zh-CN" theme-mode="dark-only"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Node.js | Wusu</title><link rel="icon" type="image/x-icon" href="https://ak.hypergryph.com/favicon.ico"><script>var config = {"root":"/","search":{"preload":false,"activeHolder":"Enter here","blurHolder":"Search","noResult":"Data \"$0\" not found"},"code":{"codeInfo":"$0 - $1 lines","copy":"code.copy","copyFinish":"code.copyFinish","expand":"code.expand"}}</script><script src="//unpkg.com/mermaid@9.2.2/dist/mermaid.min.js"></script><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lightgallery.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-zoom.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-thumbnail.css"><link type="text/css" rel="stylesheet" href="/lib/fontawesome/css/all.min.css"><link rel="stylesheet" href="/css/arknights.css"><script>if (window.localStorage.getItem('theme-mode') === 'light')
+ document.documentElement.setAttribute('theme-mode', 'light')
+if (window.localStorage.getItem('theme-mode') === 'dark')
+ document.documentElement.setAttribute('theme-mode', 'dark')</script><style>@font-face {
+ font-family: Bender;
+ src: local('Bender'), url("/font/Bender.ttf"), url("/font/Bender.otf");
+}
+@font-face {
+ font-family: BenderLight;
+ src: local('BenderLight'), url("/font/BenderLight.ttf");
+}
+@font-face {
+ font-family: 'JetBrains Mono';
+ src: local('JetBrains Mono'), url('/font/JetBrainsMono-Regular.woff2') format('woff2');
+}</style><style>:root {
+  --dark-background: url('https://ak.hypergryph.com/assets/index/images/ak/pc/bk.jpg');
+  --light-background: url('/img/bk.jpg');
+}</style><meta name="generator" content="Hexo 6.3.0"></head><body><main><header class="closed"><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><nav><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="Search" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">Home</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">Archives</span></a></li><li class="navItem"><a class="navBlock" href="/mySelf/"><span class="navItemTitle">Best Of My Love</span></a></li></ol></nav></header><article><div id="post-bg"><div id="post-title"><h1>Node.js</h1><div id="post-info"><span>First Post: <div class="control"><time datetime="2023-07-31T16:00:00.000Z" id="date"> 2023-08-01</time></div></span><br><span>Last Update: <div class="control"><time datetime="2023-09-07T06:27:11.359Z" id="updated"> 2023-09-07</time></div></span></div></div><hr><div id="post-content"><p>少年曾有凌云志</p>
+<span id="more"></span>
+
+<h3 id="npm-命令"><a href="#npm-命令" class="headerlink" title="npm 命令"></a>npm 命令</h3><ol>
+<li><code>npm init</code>：初始化一个新的 npm 项目，创建 package.json 文件。</li>
+<li><code>npm install</code>：安装一个包或一组包，并且会在当前目录存放一个 node_modules。</li>
+<li><code>npm install &lt;package-name&gt;</code>：安装指定的包。</li>
+<li><code>npm install &lt;package-name&gt; --save</code>：安装指定的包，并将其添加到 package.json 文件中的依赖列表中。</li>
+<li><code>npm install &lt;package-name&gt; --save-dev</code>：安装指定的包，并将其添加到 package.json 文件中的开发依赖列表中。</li>
+<li><code>npm install -g &lt;package-name&gt;</code>：全局安装指定的包。</li>
+<li><code>npm update &lt;package-name&gt;</code>：更新指定的包。</li>
+<li><code>npm uninstall &lt;package-name&gt;</code>：卸载指定的包。</li>
+<li><code>npm run &lt;script-name&gt;</code>：执行 package.json 文件中定义的脚本命令。</li>
+<li><code>npm search &lt;keyword&gt;</code>：搜索 npm 库中包含指定关键字的包。</li>
+<li><code>npm info &lt;package-name&gt;</code>：查看指定包的详细信息。</li>
+<li><code>npm list</code>：列出当前项目中安装的所有包。</li>
+<li><code>npm outdated</code>：列出当前项目中需要更新的包。</li>
+<li><code>npm audit</code>：检查当前项目中的依赖项是否存在安全漏洞。</li>
+<li><code>npm publish</code>：发布自己开发的包到 npm 库中。</li>
+<li><code>npm login</code>：登录到 npm 账户。</li>
+<li><code>npm logout</code>：注销当前 npm 账户。</li>
+<li><code>npm link</code>: 将本地模块链接到全局的 <code>node_modules</code> 目录下</li>
+<li><code>npm config list</code> 用于列出所有的 npm 配置信息。执行该命令可以查看当前系统和用户级别的所有 npm 配置信息，以及当前项目的配置信息（如果在项目目录下执行该命令）</li>
+<li><code>npm get registry</code> 用于获取当前 npm 配置中的 registry 配置项的值。registry 配置项用于指定 npm 包的下载地址，如果未指定，则默认使用 npm 官方的包注册表地址</li>
+<li><code>npm set registry</code> <code>npm config set registry &lt;registry-url&gt;</code> 命令，将 registry 配置项的值修改为指定的 <code>&lt;registry-url&gt;</code> 地址</li>
+</ol>
+<h3 id="Package-json"><a href="#Package-json" class="headerlink" title="Package json"></a>Package json</h3><p>执行 npm init 便可以初始化一个 package.json</p>
+<ol>
+<li><code>name</code>：项目名称，必须是唯一的字符串，通常采用小写字母和连字符的组合。</li>
+<li><code>version</code>：项目版本号，通常采用语义化版本号规范。</li>
+<li><code>description</code>：项目描述。</li>
+<li><code>main</code>：项目的主入口文件路径，通常是一个 JavaScript 文件。</li>
+<li><code>keywords</code>：项目的关键字列表，方便他人搜索和发现该项目。</li>
+<li><code>author</code>：项目作者的信息，包括姓名、邮箱、网址等。</li>
+<li><code>license</code>：项目的许可证类型，可以是自定义的许可证类型或者常见的开源许可证（如 MIT、Apache 等）。</li>
+<li><code>dependencies</code>：项目所依赖的包的列表，这些包会在项目运行时自动安装。</li>
+<li><code>devDependencies</code>：项目开发过程中所需要的包的列表，这些包不会随项目一起发布，而是只在开发时使用。</li>
+<li><code>peerDependencies</code>：项目的同级依赖，即项目所需要的模块被其他模块所依赖。</li>
+<li><code>scripts</code>：定义了一些脚本命令，比如启动项目、运行测试等。</li>
+<li><code>repository</code>：项目代码仓库的信息，包括类型、网址等。</li>
+<li><code>bugs</code>：项目的 bug 报告地址。</li>
+<li><code>homepage</code>：项目的官方网站地址或者文档地址。</li>
+</ol>
+<blockquote>
+<p>version 三段式版本号一般是 1.0.0 大版本号 次版本号 修订号， 大版本号一般是有重大变化才会升级， 次版本号一般是增加功能进行升级， 修订号一般是修改 bug 进行升级</p>
+</blockquote>
+<blockquote>
+<p>npm install 安装模块的时候一般是扁平化安装的，但是有时候出现嵌套的情况是因为版本不同 A 依赖 C1.0, B 依赖 C1.0, D 依赖 C2.0, 此时 C 1.0 就会被放到 A B 的 node_moduels, C2.0 会被放入 D 模块下面的 node_moduels</p>
+</blockquote>
+<h3 id="Nodejs-第四章（Npm-install-原理"><a href="#Nodejs-第四章（Npm-install-原理" class="headerlink" title="Nodejs 第四章（Npm install 原理)"></a><a target="_blank" rel="noopener" href="https://juejin.cn/post/7261119531891490877">Nodejs 第四章（Npm install 原理)</a></h3><h3 id="Nodejs-第五章（Npm-run-原理"><a href="#Nodejs-第五章（Npm-run-原理" class="headerlink" title="Nodejs 第五章（Npm run 原理)"></a><a target="_blank" rel="noopener" href="https://juejin.cn/post/7261235534663368741">Nodejs 第五章（Npm run 原理)</a></h3><h3 id="Nodejs-第六章（npx"><a href="#Nodejs-第六章（npx" class="headerlink" title="Nodejs 第六章（npx)"></a><a target="_blank" rel="noopener" href="https://juejin.cn/post/7261423108509302842">Nodejs 第六章（npx)</a></h3><h3 id="Nodejs-第七章（发布-npm-包"><a href="#Nodejs-第七章（发布-npm-包" class="headerlink" title="Nodejs 第七章（发布 npm 包)"></a><a target="_blank" rel="noopener" href="https://juejin.cn/post/7261518347829133372">Nodejs 第七章（发布 npm 包)</a></h3><h3 id="pnpm-关于-npm-run-的改动"><a href="#pnpm-关于-npm-run-的改动" class="headerlink" title="pnpm 关于 npm run 的改动"></a>pnpm 关于 npm run 的改动</h3><p><code>&lt;u&gt;**看完npm run 生命周期了吗 没看完回去看</code>**</p>
+<p>没错你没看错 npm 是有生命周期的</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-string">&quot;scripts&quot;</span>: &#123;<br>    <span class="hljs-string">&quot;predev&quot;</span>: <span class="hljs-string">&quot;node topost.js&quot;</span>,<br>     <span class="hljs-string">&quot;dev&quot;</span>:<span class="hljs-string">&quot;node server.js&quot;</span>,<br>     <span class="hljs-string">&quot;postdev&quot;</span>: <span class="hljs-string">&quot;node endpost.js&quot;</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>若如此定义会再执行 npm run dev 之前执行 predev 中的代码 之后执行 postdev 的代码</p>
+<p>那么有好兄弟这个时候就问了 啊博主博主我的 pnpm 不行呀</p>
+<p><a target="_blank" rel="noopener" href="https://pnpm.io/zh/cli/run#%E4%B8%8E-npm-run%E7%9A%84%E4%B8%8D%E5%90%8C%E4%B9%8B%E5%A4%84">别急看个链接</a></p>
+<p>或者你不想看 ok</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">pnpm config set enable-pre-post-scripts true<br></code></pre></td></tr></table></figure>
+
+<p>这样子设置就可以运行了</p>
+<div id="paginator"></div></div><div id="post-footer"><div id="pages"><div class="footer-link" style="width: 50%;text-align:right;border-right:1px #fe2 solid"><a href="/2023/08/15/%E7%9B%B8%E5%85%B3%E5%A4%96%E9%93%BE%E8%AE%B0%E5%BD%95/">← Next 外链汇总-持续更新</a></div><div class="footer-link" style="width: 50%;right:1px;border-left:1px #fe2 solid"><a href="/2023/07/01/FormData%E5%AF%B9%E8%B1%A1%E4%B8%8Ejquery%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/">FormData对象与jquery踩坑记录 Prev →</a></div></div></div></div><div class="bottom-btn"><div><a class="i-top" id="to-top" onClick="scrolls.scrolltop();" title="To Top" style="opacity: 0; display: none;">∧ </a><a class="i-index" id="to-index" href="#toc-div" title="To Catalog">≡</a></div></div></article><aside><div id="about"><a href="/" id="logo"><img src="https://ak.hypergryph.com/assets/index/images/ak/pc/faction/1.png" alt="Logo"></a><h1 id="Dr"><a href="/">Wusu</a></h1><div id="description"><p>Arknights</p></div><div id="social-links"><a class="social" target="_blank" rel="noopener" href="https://github.com/wusuzi"><i class="fab fa-github" alt="GitHub"></i></a><a class="social" target="_blank" rel="noopener" href="https://space.bilibili.com/91354030"><i class="fa-brands fa-bilibili" alt="BiliBili"></i></a></div></div><div id="aside-block"><div id="toc-div"><h1>Catalog</h1><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#npm-%E5%91%BD%E4%BB%A4"><span class="toc-number">1.</span> <span class="toc-text">npm 命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Package-json"><span class="toc-number">2.</span> <span class="toc-text">Package json</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Nodejs-%E7%AC%AC%E5%9B%9B%E7%AB%A0%EF%BC%88Npm-install-%E5%8E%9F%E7%90%86"><span class="toc-number">3.</span> <span class="toc-text">Nodejs 第四章（Npm install 原理)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Nodejs-%E7%AC%AC%E4%BA%94%E7%AB%A0%EF%BC%88Npm-run-%E5%8E%9F%E7%90%86"><span class="toc-number">4.</span> <span class="toc-text">Nodejs 第五章（Npm run 原理)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Nodejs-%E7%AC%AC%E5%85%AD%E7%AB%A0%EF%BC%88npx"><span class="toc-number">5.</span> <span class="toc-text">Nodejs 第六章（npx)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Nodejs-%E7%AC%AC%E4%B8%83%E7%AB%A0%EF%BC%88%E5%8F%91%E5%B8%83-npm-%E5%8C%85"><span class="toc-number">6.</span> <span class="toc-text">Nodejs 第七章（发布 npm 包)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#pnpm-%E5%85%B3%E4%BA%8E-npm-run-%E7%9A%84%E6%94%B9%E5%8A%A8"><span class="toc-number">7.</span> <span class="toc-text">pnpm 关于 npm run 的改动</span></a></li></ol></div></div><footer><nobr>Published with <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a></nobr><wbr><nobr> Theme <a target="_blank" rel="noopener" href="https://github.com/Yue-plus/hexo-theme-arknights">Arknights</a></nobr><wbr><nobr> by <a target="_blank" rel="noopener" href="https://github.com/Yue-plus">Yue_plus</a></nobr></footer></aside></main><canvas id="canvas-dust"></canvas><script src="/js/search.js"></script><script src="/js/arknights.js"></script><script src="//unpkg.com/lightgallery@2.7.1/lightgallery.min.js"></script><script src="//unpkg.com/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js"></script><script src="//unpkg.com/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script><script class="pjax-js">reset= () => {document.querySelector('.lg-container')?.remove()
+lightGallery(document.getElementById('post-bg'), {
+  plugins: [lgZoom,lgThumbnail],
+  selector: '.item-img'})}</script><script>window.addEventListener("load",() => {reset()})</script></body></html>

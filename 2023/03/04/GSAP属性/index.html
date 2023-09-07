@@ -1,0 +1,111 @@
+<!DOCTYPE html><html lang="zh-CN" theme-mode="dark-only"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>GSAP属性 | Wusu</title><link rel="icon" type="image/x-icon" href="https://ak.hypergryph.com/favicon.ico"><script>var config = {"root":"/","search":{"preload":false,"activeHolder":"Enter here","blurHolder":"Search","noResult":"Data \"$0\" not found"},"code":{"codeInfo":"$0 - $1 lines","copy":"code.copy","copyFinish":"code.copyFinish","expand":"code.expand"}}</script><script src="//unpkg.com/mermaid@9.2.2/dist/mermaid.min.js"></script><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lightgallery.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-zoom.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-thumbnail.css"><link type="text/css" rel="stylesheet" href="/lib/fontawesome/css/all.min.css"><link rel="stylesheet" href="/css/arknights.css"><script>if (window.localStorage.getItem('theme-mode') === 'light')
+ document.documentElement.setAttribute('theme-mode', 'light')
+if (window.localStorage.getItem('theme-mode') === 'dark')
+ document.documentElement.setAttribute('theme-mode', 'dark')</script><style>@font-face {
+ font-family: Bender;
+ src: local('Bender'), url("/font/Bender.ttf"), url("/font/Bender.otf");
+}
+@font-face {
+ font-family: BenderLight;
+ src: local('BenderLight'), url("/font/BenderLight.ttf");
+}
+@font-face {
+ font-family: 'JetBrains Mono';
+ src: local('JetBrains Mono'), url('/font/JetBrainsMono-Regular.woff2') format('woff2');
+}</style><style>:root {
+  --dark-background: url('https://ak.hypergryph.com/assets/index/images/ak/pc/bk.jpg');
+  --light-background: url('/img/bk.jpg');
+}</style><meta name="generator" content="Hexo 6.3.0"></head><body><main><header class="closed"><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><nav><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="Search" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">Home</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">Archives</span></a></li><li class="navItem"><a class="navBlock" href="/mySelf/"><span class="navItemTitle">Best Of My Love</span></a></li></ol></nav></header><article><div id="post-bg"><div id="post-title"><h1>GSAP属性</h1><div id="post-info"><span>First Post: <div class="control"><time datetime="2023-03-03T16:00:00.000Z" id="date"> 2023-03-04</time></div></span><br><span>Last Update: <div class="control"><time datetime="2023-09-07T06:27:54.740Z" id="updated"> 2023-09-07</time></div></span></div></div><hr><div id="post-content"><p class='item-img' data-src='https://ak.hycdn.cn/announce/images/20220623/c6de324d90b1963bf1b4664871753d60.jpg'><img src="https://ak.hycdn.cn/announce/images/20220623/c6de324d90b1963bf1b4664871753d60.jpg"></p>
+<span id="more"></span>
+
+<h3 id="GSAP-属性"><a href="#GSAP-属性" class="headerlink" title="GSAP 属性"></a>GSAP 属性</h3><h4 id="defaults"><a href="#defaults" class="headerlink" title="defaults"></a>defaults</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs javascript">gsap.<span class="hljs-title function_">defaults</span>(&#123; <span class="hljs-attr">overwrite</span>: <span class="hljs-string">&quot;auto&quot;</span>, <span class="hljs-attr">duration</span>: <span class="hljs-number">0.3</span> &#125;);<br></code></pre></td></tr></table></figure>
+
+<p>这段代码使用 gsap.defaults()方法设置了 TweenMax 和 TweenLite 的默认选项。它将 overwrite 属性设置为’auto’，这意味着 TweenMax 和 TweenLite 将自动检测并解决可能的冲突。它还将 duration 属性设置为 0.3 秒，这意味着 TweenMax 和 TweenLite 将使用 0.3 秒的时间来完成所有动画。你可以根据需要调整这些选项，以实现你想要的效果。</p>
+<h4 id="ease"><a href="#ease" class="headerlink" title="ease"></a>ease</h4><p>GSAP 库中有许多不同的缓动函数，可以用于控制动画的速度和加速度。这些缓动函数可以通过 ease 属性来指定。</p>
+<p>以下是一些常用的缓动函数：</p>
+<ul>
+<li>Linear.easeNone：匀速运动，没有加速度或减速度。</li>
+<li>Power1.easeIn：缓慢加速，然后突然停止。</li>
+<li>Power1.easeOut：突然开始，然后缓慢减速。</li>
+<li>Power1.easeInOut：缓慢加速，然后缓慢减速。</li>
+<li>Power2.easeIn：缓慢加速，然后更快地加速，最后突然停止。</li>
+<li>Power2.easeOut：突然开始，然后缓慢减速，最后更慢地减速。</li>
+<li>Power2.easeInOut：缓慢加速，然后更快地加速，然后缓慢减速。</li>
+<li>Power3.easeIn：缓慢加速，然后更快地加速，然后更快地加速，最后突然停止。</li>
+<li>Power3.easeOut：突然开始，然后缓慢减速，然后更慢地减速，最后更慢地减速。</li>
+<li>Power3.easeInOut：缓慢加速，然后更快地加速，然后更快地加速，然后缓慢减速。</li>
+<li>Back.easeIn：缓慢加速，然后超过目标值，最后回弹到目标值。</li>
+<li>Back.easeOut：突然开始，然后超过目标值，最后缓慢减速。</li>
+<li>Back.easeInOut：缓慢加速，然后超过目标值，然后缓慢减速。</li>
+<li>Elastic.easeIn：缓慢加速，然后超过目标值，然后反弹几次，最后停止。</li>
+</ul>
+<h4 id="Draggable"><a href="#Draggable" class="headerlink" title="Draggable"></a>Draggable</h4><p>Draggable.create()方法接受一个对象作为参数，该对象包含以下属性：</p>
+<ul>
+<li>type：要创建的拖动类型。可以是”top”、”left”、”x”、”y”、”scroll”或”rotation”。</li>
+<li>trigger：要触发拖动的元素或选择器。</li>
+<li>bounds：拖动的边界。可以是元素、选择器、数组或对象。</li>
+<li>edgeResistance：拖动到边缘时的阻力。可以是像素值或百分比。</li>
+<li>throwProps：是否启用 ThrowPropsPlugin 插件。如果设置为 true，则可以使用 TweenMax 或 TweenLite 等 Tween 类来模拟物理抛掷效果。</li>
+<li>onPress：当按下鼠标或触摸屏时要执行的回调函数。</li>
+<li>onDrag：当拖动时要执行的回调函数。</li>
+<li>onRelease：当释放鼠标或触摸屏时要执行的回调函数。</li>
+<li>onThrowUpdate：当使用 ThrowPropsPlugin 插件模拟抛掷效果时要执行的回调函数。</li>
+<li>onThrowComplete：当使用 ThrowPropsPlugin 插件模拟抛掷效果完成时要执行的回调函数。</li>
+<li>snap：是否启用吸附效果。如果设置为 true，则可以指定吸附点或吸附网格。</li>
+<li>snapPoints：吸附点的数组。每个吸附点都是一个对象，包含 x 和 y 属性。</li>
+<li>snapMode：吸附模式。可以是”grid”或”points”。</li>
+<li>snapStart：吸附开始时的回调函数。</li>
+<li>snapEnd：吸附结束时的回调函数。</li>
+<li>zIndexBoost：是否在拖动时提高元素的 z-index 值。如果设置为 true，则可以确保元素始终在其他元素的上方。</li>
+<li>cursor：拖动时要使用的光标类型。可以是”grab”、”grabbing”或自定义光标的 URL。</li>
+<li>lockAxis：是否锁定拖动的</li>
+</ul>
+<h4 id="ScrollTrigger"><a href="#ScrollTrigger" class="headerlink" title="ScrollTrigger"></a>ScrollTrigger</h4><p>ScrollTrigger 是 GSAP 的一个插件，它可以帮助你在滚动时触发动画。以下是一些常用的 ScrollTrigger 属性：</p>
+<h5 id="trigger"><a href="#trigger" class="headerlink" title="trigger"></a>trigger</h5><p>触发器元素或选择器，用于指定触发动画的元素。</p>
+<h5 id="start-x2F-end"><a href="#start-x2F-end" class="headerlink" title="start&#x2F;end"></a>start&#x2F;end</h5><p>触发动画的位置&#x2F;动画结束的位置，可以是像素值、百分比或关键字（例如”top”或”center”）。</p>
+<p>在使用 GSAP 的 ScrollTrigger 插件时，<code>start</code>属性用于指定滚动触发器的开始位置。<code>start</code>属性可以是字符串、数字或函数，并且支持各种单位（例如像素、百分比、视口高度等）。</p>
+<p>以下是<code>start</code>属性的详细解释：</p>
+<ul>
+<li>字符串: 可以使用字符串来指定开始位置。可以使用以下字符串值之一：<ul>
+<li>“top”：元素顶部与视口顶部对齐。</li>
+<li>“center”：元素的中心与视口的中心对齐。</li>
+<li>“bottom”：元素底部与视口底部对齐。</li>
+<li>其他字符串：可以是任何有效的 CSS 单位，例如”100px”、”50%”等。</li>
+</ul>
+</li>
+<li>数字: 可以使用数字来指定开始位置。数字表示滚动容器的滚动距离（以像素为单位），相对于元素的顶部。</li>
+<li>函数: 可以使用函数来动态计算开始位置。这个函数将接收一个参数，表示元素的 DOM 节点。函数应该返回一个数字，表示滚动容器的滚动距离（以像素为单位），相对于元素的顶部。</li>
+</ul>
+<p>例如，如果你想让元素在视口顶部的 50%处触发动画，可以将<code>start</code>属性设置为”50%”：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">ScrollTrigger.create(&#123;<br>  trigger: &quot;.box&quot;,<br>  start: &quot;50%&quot;,<br>&#125;);<br></code></pre></td></tr></table></figure>
+
+<p>如果你想让元素在视口向上滚动 100 像素时触发动画，可以将<code>start</code>属性设置为 100：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">ScrollTrigger.create(&#123;<br>  trigger: &quot;.box&quot;,<br>  start: 100,<br>&#125;);<br></code></pre></td></tr></table></figure>
+
+<p>如果你想动态计算开始位置，可以使用一个函数来返回计算结果：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">ScrollTrigger.create(&#123;<br>  trigger: &quot;.box&quot;,<br>  start: function() &#123;<br>    return window.innerHeight / 2;<br>  &#125;,<br>&#125;);<br></code></pre></td></tr></table></figure>
+
+<p>需要注意的是，<code>start</code>属性可以根据需要进行配置，以控制滚动触发器的开始位置。</p>
+<h5 id="scrub"><a href="#scrub" class="headerlink" title="scrub"></a>scrub</h5><p>是否启用滚动时的平滑动画效果。</p>
+<h5 id="markers"><a href="#markers" class="headerlink" title="markers"></a>markers</h5><p>是否在页面上显示触发器和动画的标记。true&#x2F;false&#x2F;object;</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs plaintext"> markers: &#123;<br>     endColor:&#x27;blue&#x27;,<br>     startColor:&#x27;yellow&#x27;,<br>     fontSize:&#x27;20px&#x27;<br>&#125;,<br></code></pre></td></tr></table></figure>
+
+<h5 id="pin"><a href="#pin" class="headerlink" title="pin"></a>pin</h5><p>是否固定元素，使其在滚动时保持可见。</p>
+<h5 id="markers-1"><a href="#markers-1" class="headerlink" title="markers"></a>markers</h5><p>提示线 提示起始&#x2F;结束位置的线</p>
+<h5 id="toggleActions"><a href="#toggleActions" class="headerlink" title="toggleActions"></a>toggleActions</h5><p>在使用 GSAP 的 ScrollTrigger 插件时，toggleActions 是一个可选的配置属性，它可以控制动画在滚动触发器的不同状态下的行为。toggleActions 属性是一个字符串，由四个值组成，分别对应四个状态：进入视口、离开视口、进入视口后再次进入视口和离开视口后再次离开视口。每个状态都有一个对应的值，它可以是字符串或函数。</p>
+<p>以下是 toggleActions 属性的详细解释：</p>
+<ul>
+<li>play: 当元素进入视口时，动画将从头开始播放。当元素离开视口时，动画将回退到初始状。</li>
+<li>pause: 当元素进入视口时，动画将暂停在当前位置。当元素离开视口时，动画将暂停在当前位置。</li>
+<li>resume: 当元素进入视口时，动画将从上次停止的位置继续播放。当元素离开视口时，动画将回退到初始状态。</li>
+<li>reset: 当元素进入视口时，动画将从头开始播放。当元素离开视口时，动画将回退到初始状态，并清除动画的所有状态。</li>
+<li>restart: 当元素进入视口时，动画将从头开始播放。当元素离开视口时，动画将从头开始播放。</li>
+<li>togglePlay: 当元素进入视口时，动画将从头开始播放或暂停。当元素离开视口时，动画将回退到初始状态或暂停。</li>
+<li>toggleClass: 当元素进入视口时，将在指定的元素上添加或删除指定的类名。当元素离开视口时，将从指定的元素上添加或删除指定的类名。</li>
+<li>函数: 可以使用函数来自定义动画在每个状态下的行为。这个函数将接收一个布尔值参数，表示元素是否在视口中。函数应该返回一个对象，其中包含 play、pause、resume、reset、restart、togglePlay 或 toggleClass 属性，这些属性对应着每个状态的行为。</li>
+<li>例如，如果你想在元素进入视口后暂停动画，离开视口后回退到初始状态，再次进入视口后从上次停止的位置继续播放，可以将 toggleActions 属性设置为”pause reset resume”。</li>
+</ul>
+<div id="paginator"></div></div><div id="post-footer"><div id="pages"><div class="footer-link" style="width: 50%;text-align:right;border-right:1px #fe2 solid"><a href="/2023/05/25/XLSX%E6%8F%92%E4%BB%B6%E4%BD%BF%E7%94%A8/">← Next XLSX 插件使用</a></div><div class="footer-link" style="width: 50%;right:1px;border-left:1px #fe2 solid"><a href="/2022/08/01/canvas/">Canvas Prev →</a></div></div></div></div><div class="bottom-btn"><div><a class="i-top" id="to-top" onClick="scrolls.scrolltop();" title="To Top" style="opacity: 0; display: none;">∧ </a><a class="i-index" id="to-index" href="#toc-div" title="To Catalog">≡</a></div></div></article><aside><div id="about"><a href="/" id="logo"><img src="https://ak.hypergryph.com/assets/index/images/ak/pc/faction/1.png" alt="Logo"></a><h1 id="Dr"><a href="/">Wusu</a></h1><div id="description"><p>Arknights</p></div><div id="social-links"><a class="social" target="_blank" rel="noopener" href="https://github.com/wusuzi"><i class="fab fa-github" alt="GitHub"></i></a><a class="social" target="_blank" rel="noopener" href="https://space.bilibili.com/91354030"><i class="fa-brands fa-bilibili" alt="BiliBili"></i></a></div></div><div id="aside-block"><div id="toc-div"><h1>Catalog</h1><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#GSAP-%E5%B1%9E%E6%80%A7"><span class="toc-number">1.</span> <span class="toc-text">GSAP 属性</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#defaults"><span class="toc-number">1.1.</span> <span class="toc-text">defaults</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#ease"><span class="toc-number">1.2.</span> <span class="toc-text">ease</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Draggable"><span class="toc-number">1.3.</span> <span class="toc-text">Draggable</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#ScrollTrigger"><span class="toc-number">1.4.</span> <span class="toc-text">ScrollTrigger</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#trigger"><span class="toc-number">1.4.1.</span> <span class="toc-text">trigger</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#start-x2F-end"><span class="toc-number">1.4.2.</span> <span class="toc-text">start&#x2F;end</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#scrub"><span class="toc-number">1.4.3.</span> <span class="toc-text">scrub</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#markers"><span class="toc-number">1.4.4.</span> <span class="toc-text">markers</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#pin"><span class="toc-number">1.4.5.</span> <span class="toc-text">pin</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#markers-1"><span class="toc-number">1.4.6.</span> <span class="toc-text">markers</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#toggleActions"><span class="toc-number">1.4.7.</span> <span class="toc-text">toggleActions</span></a></li></ol></li></ol></li></ol></div></div><footer><nobr>Published with <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a></nobr><wbr><nobr> Theme <a target="_blank" rel="noopener" href="https://github.com/Yue-plus/hexo-theme-arknights">Arknights</a></nobr><wbr><nobr> by <a target="_blank" rel="noopener" href="https://github.com/Yue-plus">Yue_plus</a></nobr></footer></aside></main><canvas id="canvas-dust"></canvas><script src="/js/search.js"></script><script src="/js/arknights.js"></script><script src="//unpkg.com/lightgallery@2.7.1/lightgallery.min.js"></script><script src="//unpkg.com/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js"></script><script src="//unpkg.com/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script><script class="pjax-js">reset= () => {document.querySelector('.lg-container')?.remove()
+lightGallery(document.getElementById('post-bg'), {
+  plugins: [lgZoom,lgThumbnail],
+  selector: '.item-img'})}</script><script>window.addEventListener("load",() => {reset()})</script></body></html>
