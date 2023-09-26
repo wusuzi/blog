@@ -1661,7 +1661,7 @@ main:not(.up) .search #search-header input {
 }
 @media (min-width: 1024px) {
   .search-popup {
-    background-color: var(--theme-bg-trans0);
+    background-color: transparent;
   }
   #search-header .navItemTitle::before {
     z-index: -2;
